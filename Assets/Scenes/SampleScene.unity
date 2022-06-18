@@ -1112,7 +1112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &197490884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2322,6 +2322,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441184968}
   m_CullTransparentMesh: 1
+--- !u!1 &442252260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442252261}
+  - component: {fileID: 442252262}
+  m_Layer: 5
+  m_Name: Script Pantalla 7 Ayuda
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &442252261
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442252260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1006431377}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &442252262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442252260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbad0960794bf247acbcff3bbbf97ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pantalla1Logo: {fileID: 2134875699}
+  Pantalla2Inicio: {fileID: 205979782}
+  Pantalla3Fondos: {fileID: 610159056}
+  Pantalla4Personajes: {fileID: 1388744972}
+  Pantalla5Camara: {fileID: 293780710}
+  Pantalla6Timer: {fileID: 754250983}
+  Pantalla7Ayuda: {fileID: 1006431376}
+  Pantalla8Descarga: {fileID: 110958790}
+  Boton_Atras: {fileID: 1922508491}
 --- !u!1 &483574999
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,7 +2867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &610159057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2829,6 +2887,7 @@ RectTransform:
   - {fileID: 652791400}
   - {fileID: 1321965199}
   - {fileID: 810943832}
+  - {fileID: 825754569}
   m_Father: {fileID: 1797668217}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3592,6 +3651,42 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &825754568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825754569}
+  m_Layer: 5
+  m_Name: Script Pantalla 3 Fondos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &825754569
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825754568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610159057}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &870500020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,7 +3976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &899076810
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4119,6 +4214,7 @@ RectTransform:
   - {fileID: 1922508490}
   - {fileID: 1051215308}
   - {fileID: 1956108846}
+  - {fileID: 442252261}
   m_Father: {fileID: 1797668217}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4380,7 +4476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1047636910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4860,7 +4956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1153200162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6240,14 +6336,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbc3359f518c8f0499afd4d18fc6583c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pantalla1Logo: {fileID: 0}
-  Pantalla2Inicio: {fileID: 0}
-  Pantalla3Fondos: {fileID: 0}
-  Pantalla4Personajes: {fileID: 0}
-  Pantalla5Camara: {fileID: 0}
-  Pantalla6Timer: {fileID: 0}
-  Pantalla7Ayuda: {fileID: 0}
-  Pantalla8Descarga: {fileID: 0}
+  Pantalla1Logo: {fileID: 2134875699}
+  Pantalla2Inicio: {fileID: 205979782}
+  Pantalla3Fondos: {fileID: 610159056}
+  Pantalla4Personajes: {fileID: 1388744972}
+  Pantalla5Camara: {fileID: 293780710}
+  Pantalla6Timer: {fileID: 754250983}
+  Pantalla7Ayuda: {fileID: 1006431376}
+  Pantalla8Descarga: {fileID: 110958790}
   botonPersonaje1: {fileID: 483575003}
   botonPersonaje2: {fileID: 15938217}
   botonPersonaje3: {fileID: 814407300}
@@ -6257,6 +6353,7 @@ MonoBehaviour:
   botonAtrasPersonajes: {fileID: 1459717857}
   botonRestarurarPersonajes: {fileID: 84337399}
   botonContinuarPersonajes: {fileID: 143923630}
+  Boton_Atras: {fileID: 1459717857}
   PerspnajeVideo1: {fileID: 880285974}
   PerspnajeVideo2: {fileID: 1300716914}
   PerspnajeVideo3: {fileID: 951957241}

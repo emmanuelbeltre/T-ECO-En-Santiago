@@ -28,7 +28,7 @@ public class SeleccionPersonajes : MonoBehaviour{
 	public Button botonAtrasPersonajes;
 	public Button botonRestarurarPersonajes;
 	public Button botonContinuarPersonajes;
-	
+	public Button Boton_Atras;
    
 	//Estas variables representan los videos de cada personaje que se puede elejir.
 	[Header("Personajes")]
@@ -56,7 +56,7 @@ public class SeleccionPersonajes : MonoBehaviour{
 	    botonPersonaje4.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo4));
 	    botonPersonaje5.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo5));
 	    botonPersonaje6.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo6));
-
+	    Boton_Atras.onClick.AddListener(atras);
 		
 	    //sizeArreglo.onClick.AddListener(()=> SizeDelArreglo(Personas, "Persona"));
 	    //sizeArreglo.onClick.AddListener(()=> MostrarAlerta());
@@ -121,15 +121,26 @@ public class SeleccionPersonajes : MonoBehaviour{
 		}
 	}
 	
+	
 	//Con esta funcion apaga/enciende las pantallas para la navegacion
 	void CargarPantalla(GameObject estado)
 	{
-		//p_inico.SetActive(false);
-		//p_cuentas.SetActive(false);
-		//p_trasacciones.SetActive(false);
+		Pantalla1Logo.SetActive(false);
+		Pantalla2Inicio.SetActive(false);
+		Pantalla3Fondos.SetActive(false);
+		Pantalla4Personajes.SetActive(false);
+		Pantalla5Camara.SetActive(false);
+		Pantalla6Timer.SetActive(false);
+		Pantalla1Logo.SetActive(false);
+		Pantalla7Ayuda.SetActive(false);
+		Pantalla8Descarga.SetActive(false);
 
-		//estado.SetActive(true);
+		estado.SetActive(true);
 
+	}
+	//Funcion para volver atras
+	void atras(){
+		CargarPantalla(Pantalla2Inicio);
 	}
 	
 }
