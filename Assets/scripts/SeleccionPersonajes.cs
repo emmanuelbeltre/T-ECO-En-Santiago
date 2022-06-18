@@ -29,6 +29,7 @@ public class SeleccionPersonajes : MonoBehaviour{
 	public Button botonRestarurarPersonajes;
 	public Button botonContinuarPersonajes;
 	public Button Boton_Atras;
+
    
 	//Estas variables representan los videos de cada personaje que se puede elejir.
 	[Header("Personajes")]
@@ -57,7 +58,7 @@ public class SeleccionPersonajes : MonoBehaviour{
 	    botonPersonaje5.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo5));
 	    botonPersonaje6.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo6));
 	    Boton_Atras.onClick.AddListener(atras);
-		
+	    botonRestarurarPersonajes.onClick.AddListener(RestaurarPersonajes);
 	    //sizeArreglo.onClick.AddListener(()=> SizeDelArreglo(Personas, "Persona"));
 	    //sizeArreglo.onClick.AddListener(()=> MostrarAlerta());
     }
@@ -137,6 +138,16 @@ public class SeleccionPersonajes : MonoBehaviour{
 
 		estado.SetActive(true);
 
+	}
+	
+	void RestaurarPersonajes(){
+		PerspnajeVideo1.SetActive(false);
+		PerspnajeVideo2.SetActive(false);
+		PerspnajeVideo3.SetActive(false);
+		PerspnajeVideo4.SetActive(false);
+		PerspnajeVideo5.SetActive(false);
+		PerspnajeVideo6.SetActive(false);
+		conteo = 0;
 	}
 	//Funcion para volver atras
 	void atras(){
