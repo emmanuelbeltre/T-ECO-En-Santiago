@@ -6,6 +6,16 @@ using UnityEngine.UI;
 
 public class SeleccionPersonajes : MonoBehaviour{
 	
+	//Estas variables representan las diferentes pantallas
+	[Header("Pantallas")]
+	public GameObject Pantalla1Logo;
+	public GameObject Pantalla2Inicio;
+	public GameObject Pantalla3Fondos;
+	public GameObject Pantalla4Personajes;
+	public GameObject Pantalla5Camara;
+	public GameObject Pantalla6Timer;
+	public GameObject Pantalla7Ayuda;
+	public GameObject Pantalla8Descarga;
 	//Estas variables representan cada botón de selección de personajes
 	
 	[Header("Botones/Selección")]	
@@ -15,6 +25,9 @@ public class SeleccionPersonajes : MonoBehaviour{
 	public Button botonPersonaje4;
 	public Button botonPersonaje5;
 	public Button botonPersonaje6;
+	public Button botonAtrasPersonajes;
+	public Button botonRestarurarPersonajes;
+	public Button botonContinuarPersonajes;
 	
    
 	//Estas variables representan los videos de cada personaje que se puede elejir.
@@ -36,7 +49,7 @@ public class SeleccionPersonajes : MonoBehaviour{
     void Start()
     {
 	    conteo = 0;
- 
+	    botonContinuarPersonajes.GetComponent<Button>().interactable = false;
 	    botonPersonaje1.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo1));
 	    botonPersonaje2.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo2));
 	    botonPersonaje3.onClick.AddListener(()=> MostrarPersonajePantalla(PerspnajeVideo3));
@@ -57,7 +70,7 @@ public class SeleccionPersonajes : MonoBehaviour{
     
 	//Con esta función podremos mostrar y ocultar cada uno de los personaje con solo presionando su botón correspondiente
 	void MostrarPersonajePantalla(GameObject personaje){
-	
+
 		if (personaje.activeSelf)
 		{
 			personaje.SetActive(false);
@@ -77,6 +90,13 @@ public class SeleccionPersonajes : MonoBehaviour{
 			personaje.SetActive(true);
 			Debug.Log(conteo);
 		}
+		
+		//Con Esta condicion se habilita/deshabilita el boton de contunuar en la seleccion de personajes	
+		if (conteo != 4)
+		{
+			botonContinuarPersonajes.GetComponent<Button>().interactable = false;
+		}
+		else{botonContinuarPersonajes.GetComponent<Button>().interactable = true;}
 	
 		
 	}
@@ -100,6 +120,16 @@ public class SeleccionPersonajes : MonoBehaviour{
 			Debug.Log("El objeto "+  i + " tiene el nombre" + miArr[i].name);
 		}
 	}
-    
-    
+	
+	//Con esta funcion apaga/enciende las pantallas para la navegacion
+	void CargarPantalla(GameObject estado)
+	{
+		//p_inico.SetActive(false);
+		//p_cuentas.SetActive(false);
+		//p_trasacciones.SetActive(false);
+
+		//estado.SetActive(true);
+
+	}
+	
 }
