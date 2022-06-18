@@ -22,7 +22,7 @@ public class FondosPantalla : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+	    Boton_Atras.onClick.AddListener(atras);
     }
 
     // Update is called once per frame
@@ -30,4 +30,26 @@ public class FondosPantalla : MonoBehaviour
     {
         
     }
+    
+	//Con esta funcion apaga/enciende las pantallas para la navegacion
+	void CargarPantalla(GameObject estado)
+	{
+		Pantalla1Logo.SetActive(false);
+		Pantalla2Inicio.SetActive(false);
+		Pantalla3Fondos.SetActive(false);
+		Pantalla4Personajes.SetActive(false);
+		Pantalla5Camara.SetActive(false);
+		Pantalla6Timer.SetActive(false);
+		Pantalla1Logo.SetActive(false);
+		Pantalla7Ayuda.SetActive(false);
+		Pantalla8Descarga.SetActive(false);
+
+		estado.SetActive(true);
+
+	}
+
+    
+	void atras(){
+		CargarPantalla(Pantalla2Inicio);
+	}
 }
